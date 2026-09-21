@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CompostYield</RootNamespace>
+    <AssemblyName>CompostYield</AssemblyName>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>ezuku</Authors>
+    <Product>CompostYield</Product>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NoStdLib>true</NoStdLib>
+    <NoCompilerStandardLib>true</NoCompilerStandardLib>
+    <AutomaticallyUseReferenceAssemblyPackages>false</AutomaticallyUseReferenceAssemblyPackages>
+    <!-- Assemblies du jeu et de BepInEx : voir README (dossier Libs, jamais commite). -->
+    <ValheimLibs Condition=" '$(ValheimLibs)' == '' ">$(MSBuildProjectDirectory)\Libs</ValheimLibs>
+    <FrameworkPathOverride>$(ValheimLibs)</FrameworkPathOverride>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.34.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(ValheimLibs)\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(ValheimLibs)\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerSync">
+      <HintPath>ServerSync.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_utils">
+      <HintPath>$(ValheimLibs)\assembly_utils.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_valheim">
+      <HintPath>$(ValheimLibs)\assembly_valheim.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ValheimLibs)\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ValheimLibs)\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(ValheimLibs)\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>$(ValheimLibs)\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>$(ValheimLibs)\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>$(ValheimLibs)\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

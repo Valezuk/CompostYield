@@ -1,0 +1,10 @@
+{
+  "name": "CompostYield",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "Multiplie le rendement du compost d'OdinArchitect : une viande donne plusieurs appats au lieu d'un seul. Valeur synchronisee par le serveur.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2350",
+    "OdinPlus-OdinArchitect-1.7.5"
+  ]
+}
